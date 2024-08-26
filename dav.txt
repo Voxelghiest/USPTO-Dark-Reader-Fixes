@@ -1,0 +1,135 @@
+dav.uspto.gov/webapp
+
+INVERT
+.controls .highlight .icon
+.arrow-down-icon, .eti-selectmenu-arrow, .left-arrow
+.preferencesoverlay .pattern-icon::after
+.sort-icon
+.claimBlockIcon, .claimIndentIcon, .claimParagraphIcon
+
+CSS
+:root {
+    --main-bg-color: rgb(31, 34, 35);
+}
+.header .toolbar .icons > div.bar-section-divider:not(.spacer) {
+    border-right-color: #ffffff !important;
+}
+.header .toolbar {
+    background-color: #303030 !important;
+    box-shadow: inset 0 1px 0 #5A5A5A, 0 1px 2px #888 !important;
+}
+.mainbar {
+    background-color: #004c97 !important;
+    border-bottom-color: #222 !important;
+}
+.barbutton {
+    background-image: linear-gradient(#444, #333) !important;
+    border-color: #222 !important;
+    box-shadow: inset 0px 1px 0px #5a5a5a, 0px 1px 0px #505050 !important;
+}
+.toolbar .spacer {
+    border-left-color: #2e2e2e !important;
+    border-right-color: #4d4d4d !important;
+}
+.pe2ebutton {
+    border-color: #555 !important;
+    color: white !important;
+}
+.searchbutton {
+    background-color: #00a686 !important;
+}
+.ocbutton {
+    background-color: #6c4b7e !important;
+}
+:is(.content, .etiCollapsiblePane) button:not(.highlight, .highlight-color, .highlight-visibility, .columnpicker, .extract, .ocr-confidence.active, .refresh-paused .eti-widget-refreshTimer-button) .icon,
+.documentListMenu_Button::after,
+.annotation_toolbar_listMenu :is(.annotation_arrow, .annotation_line, .annotation_oval, .annotation_rect)::before,
+.grid :is(.icon-star-filled, .icon-star-hollow),
+.iconStar {
+    filter: invert(1) hue-rotate(180deg) brightness(1.25) !important;
+}
+:is(button, .button):not(:disabled, .disabled, .header *, .etiCollapsiblePane .collapsible-pane-arrow, .eti-widget-documentMetadata .eti-widget-documentMetadata-toggle, .eti-widget-claimsTreeViewerToolbar .eti-widget-claimsTreeViewerToolbar-toggle):hover {
+    box-shadow: inset 0 0 2px #ddd;
+}
+:is(.button.active, .button:active, button.active, button:active):not(.header *, .etiCollapsiblePane .collapsible-pane-arrow, .eti-widget-documentMetadata .eti-widget-documentMetadata-toggle, .eti-widget-claimsTreeViewerToolbar .eti-widget-claimsTreeViewerToolbar-toggle) {
+    box-shadow: inset 0 0 4px #aaa !important;
+}
+.ocr-confidence.active .icon {
+    filter: brightness(1.5);
+}
+.loading-mask-wheel {
+    filter: invert(1) brightness(2);
+    mix-blend-mode: lighten;
+}
+.refresh-paused .eti-widget-refreshTimer-button {
+    border-color: #a1a1a1 !important;
+}
+.notes-viewer.etiCollapsiblePane {
+    background-color: var(--main-bg-color) !important;
+}
+.claims-tree-viewer:not(.expanded) .eti-widget-claimsTreeViewer {
+    display: none !important;
+}
+.claimTreeIndented .text-claimnumber tspan {
+    fill: var(--darkreader-neutral-text) !important;
+}
+.claimTreeIndented rect.highlight:hover {
+    fill: var(--darkreader-selection-background) !important;
+}
+.eti-widget-claimsTreeViewer svg.claimHierarchy text {
+    fill: #414141 !important;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    color: #ddd !important;
+}
+.eti-widget-combobox .eti-widget-combobox-button.eti-widget-dropDownButton {
+    border-color: #666 !important;
+}
+.panel .tabs .tab.active :is(.start-slope, .end-slope) {
+    filter: invert(1) invert(4%) sepia(2%) saturate(3449%) hue-rotate(155deg) brightness(93%) contrast(87%);
+}
+.panel .tabs .tab.active .close {
+    filter: invert(100%) brightness(125%) !important;
+}
+.panel .tabs .tab.active .close:hover {
+    filter: none !important;
+}
+.panel .tabs .tab:not(.active):hover::after {
+    background-color: rgba(235, 235, 235, .3) !important;
+}
+.panel .tabs .tab::after {
+    border-top-color: rgba(255, 255, 255, 0.5) !important;
+}
+.tabcontrols .controls {
+    border-left-color: rgba(255, 255, 255, 0.3);
+}
+.eti-widget-searchbox .button-group .button-like.eti-widget-searchbox-input input {
+    background-color: transparent !important;
+}
+.eti-widget-searchbox .button-group .button-like.eti-widget-searchbox-input input::placeholder {
+    color: #ddd;
+}
+.documentViewer .invert-image-colors img {
+    background-color: transparent !important;
+}
+.stamping.invert-colors .image-viewer .dav-imageDocumentView .dav-virtualScrollRegion {
+    cursor: url('data:image/svg+xml,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" version="1.0"><g><path d="m17.51,10.79l-18,0l-1.75,-2l1.75,-1.99l18,0l-1.75,1.99l1.75,2z" fill="white" stroke="black" stroke-opacity="0" transform="rotate(-45 7.635 8.795)"/><path d="m0,0l6.29,4.23l-3.82,0.41l-2.47,2.94l0,-7.58z" fill="white" stroke="black" stroke-opacity="0"/></g></svg>'), text;
+}
+
+IGNORE INLINE STYLE
+.highlight-color .icon
+.eti-widget-Colorpicker-color
+span[hkey]
+.eti-widget-claimsTreeViewer .claimTreeIndented .toggle line.vertical
+
+IGNORE IMAGE ANALYSIS
+.icon, .pin
+.simpleGrid-container .columnpickermenu .icon
+.clear-all .icon
+.show-annotations .icon
+.header .help:hover
+.pattern-icon::after
+.loading-mask-wheel
+.annotation_toolbar_listMenu :is(.annotation_arrow, .annotation_line, .annotation_oval, .annotation_rect)::before

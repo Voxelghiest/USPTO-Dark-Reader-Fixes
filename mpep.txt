@@ -1,0 +1,62 @@
+rdms-mpep-vip.uspto.gov
+mpep.uspto.gov
+
+INVERT
+#toolbar::before
+.figure img:not([src="graphics/E9_R-07.2022/seals.png"])
+div.rdms-buttonbar > ul.rdms-buttonbar-nav li > a > img
+img[src="/resource/images/icon_note.png"]
+#highlight-widget-up-icon
+#highlight-widget-down-icon
+
+CSS
+body {
+    color: var(--darkreader-neutral-text) !important;
+}
+#rdms-header {
+    background-color: #93B5BE !important;
+    background-image: url(/resource/images/banner_bg.png) !important;
+}
+#rdms-header :is(.text-blue, .logo-cell a, ul.topNav a) {
+    color: #00396d !important;
+}
+#search-constraints {
+    color: #333 !important;
+}
+ul#rdms-settings-menu-area > li > a {
+    color: var(--darkreader-neutral-text) !important;
+}
+#toolbar {
+    background-image: none !important;
+    position: relative;
+}
+#toolbar::before {
+    background-image: url(/resource/images/nav_bg.png);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.toolbar-item {
+    color: var(--darkreader-neutral-text) !important;
+}
+img[src="graphics/E9_R-07.2022/seals.png"] {
+    border-radius: 50%;
+}
+h1.page-title {
+    border-bottom-color: #9E0B00 !important;
+}
+
+IGNORE IMAGE ANALYSIS
+#rdms-header
+#rdms-header ul.topNav > li
+.searchbutton button
+#toolbar
+#search-over input
+#highlight-widget-up-icon
+#highlight-widget-down-icon
+#highlight-widget-up-icon:hover
+#highlight-widget-down-icon:hover

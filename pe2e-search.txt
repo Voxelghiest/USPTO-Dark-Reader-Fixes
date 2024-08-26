@@ -1,0 +1,116 @@
+pe2e-search.aws.uspto.gov
+
+CSS
+:is(.content, .modal-dialog) .icon:not(.button, button[data-id="ered"] *, .ered *, .documentViewer .realdocument *, .refreshAll),
+:is(.custom-dropdown, .notes-viewer-actions, .button-menu .columnSettings)::after,
+.tabs .tab.active .icon,
+.slick-group-toggle,
+.icon-gear,
+.content .refreshAll::before {
+    filter: invert(100%) hue-rotate(180deg) brightness(125%) !important;
+}
+header nav.toolbar button.barbutton:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+header nav.toolbar .workspaces .buttons,
+header nav.toolbar button.barbutton,
+header nav.toolbar .workspaces .eti-widget-combobox .eti-widget-combobox-button {
+    background-image: linear-gradient(to bottom, #444 0, #333 100%);
+    border-color: #222;
+}
+header .mainbar {
+    background-color: #004c97;
+}
+header .mainbar .pe2ebutton {
+    border-color: #222;
+    color: #fff;
+}
+header .mainbar .davbutton {
+    background-color: #4c76bd;
+}
+header .mainbar .ocbutton {
+    background-color: #6c4b7e;
+}
+.workspaces .group::before,
+header nav.toolbar .icons > div.currentcase::before {
+    border-left-color: #2e2e2e;
+    border-right-color: #4d4d4d;
+}
+.panel .tabcontrols .tabs .tab .btn-link.close::before,
+.panel .tabcontrols .tabs .tab .btn-link.close::after {
+    background-color: #fff !important;
+}
+.panel .tabcontrols .tabs .tab.active::before {
+    border-right-color: rgb(34, 36, 38);
+}
+.panel .tabcontrols .tabs .tab.active::after {
+    border-left-color: rgb(34, 36, 38);
+}
+.panel .tabcontrols .controls {
+    border-left-color: rgba(255, 255, 255, 0.3);
+}
+.panel .tabcontrols .controls::after {
+    border-right-color: rgba(255, 255, 255, 0.3);
+}
+.button:hover,
+button:hover {
+    box-shadow: inset 0 0 2px #a0a0a0;
+}
+.searchHistory .content .grid :is(.slick-cell, .slick-viewport),
+.hitTerms .contentGrid .hit-terms-table .slick-cell,
+.taggedDocument .content .grid .slick-row:not(.slick-group) {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.searchResults .grid .slick-row {
+    background-color: transparent;
+}
+.searchResults .grid .slick-row .slick-cell:not(.activated) {
+    background-color: inherit !important;
+}
+.gadget.searchResults .grid.singleline .activated.slick-cell {
+    background-color: #ffb !important;
+    color: black !important;
+}
+.taggedDocument .content .grid .slick-row:not(.slick-group) .slick-cell .btn-link,
+.searchResults .grid .btn-link {
+    color: rgb(0, 76, 151) !important;
+}
+.gadget.documentViewer[data-gadgetid="1"] .realdocument a:not(.highlight a),
+.realdocument .btn-link {
+    color: rgb(0, 76, 151) !important;
+}
+.documentViewer .widgetToolbar button.icon-folder .icon {
+    background-image: url(https://pe2e-search.aws.uspto.gov/ui/images/toolbars_new_sprite.png?rev=1d488623) !important;
+    background-position: -121px -14px !important;
+    height: 17px;
+    width: 20px;
+}
+.findWithin .navigator {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(${whiteSmoke}), to(${#dbdbdb})) !important;
+}
+.find-within-mark {
+    background-color: #dfc74a !important;
+}
+
+IGNORE INLINE STYLE
+.documentViewer, .documentViewer .realdocument, .documentViewer .realdocument *
+.searchResults
+.notesViewer
+.taggedDocument :is(.content, .slick-viewport)
+.gadget.help, .gadget.help *
+
+IGNORE IMAGE ANALYSIS
+.button-menu .ered .columnSettings::after
+.ered .button-menu .columnSettings::after
+.ered .gadget.documentViewer .notesPanel .titleBar .notesNavigation button > span
+.ered .icon
+.button-menu .documentViewer .widgetToolbar .button-like[class*="icon-"] .columnSettings::after
+.button-menu .documentViewer .widgetToolbar .button[class*="icon-"] .columnSettings::after
+.documentViewer .widgetToolbar .button-like[class*="icon-"] .button-menu .columnSettings::after
+.documentViewer .widgetToolbar .button-like[class*="icon-"] .icon
+.documentViewer .widgetToolbar .button[class*="icon-"] .button-menu .columnSettings::after
+.documentViewer .widgetToolbar .button[class*="icon-"] .icon
+.gadget.documentViewer .notesPanel .titleBar .notesNavigation .widgetToolbar .button-like[class*="icon-"] button > span
+.gadget.documentViewer .notesPanel .titleBar .notesNavigation .widgetToolbar .button[class*="icon-"] button > span
+.gadget.documentViewer .widgetToolbar .button-like[class*="icon-"] .notesPanel .titleBar .notesNavigation button > span
+.gadget.documentViewer .widgetToolbar .button[class*="icon-"] .notesPanel .titleBar .notesNavigation button > span

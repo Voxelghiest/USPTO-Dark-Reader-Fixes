@@ -1,0 +1,111 @@
+dav.uspto.gov/oc
+
+INVERT
+.arrow-down-icon, .arrow-dropdown .icon, .eti-selectmenu-arrow, .left-arrow, .documentListMenu_Button::after
+.preferencesoverlay .pattern-icon::after
+.sort-icon
+.import-manager-status-dialog :is(.importFail, .importSuccess) .accordion-button::before
+
+CSS
+.header .toolbar .icons > div.bar-section-divider:not(.spacer) {
+    border-right-color: #ffffff !important;
+}
+.header .toolbar {
+    background-color: #303030 !important;
+    box-shadow: inset 0 1px 0 #5A5A5A, 0 1px 2px #888 !important;
+}
+:is(.content, .etiCollapsiblePane) button:not(.columnpicker) .icon,
+.grid :is(.icon-star-filled, .icon-star-hollow) {
+    filter: invert(1) hue-rotate(180deg) brightness(1.25) !important;
+}
+.eti-widget-combobox .eti-widget-combobox-button.eti-widget-dropDownButton {
+    border-color: #666 !important;
+}
+.tabcontrols .controls {
+    border-left-color: rgba(255, 255, 255, 0.3);
+}
+.panel .tabs .tab:not(.active) .tab-content {
+    background-color: var(--tab-background-color) !important;
+}
+.panel .tabs .tab .tab-content {
+    border-top-color: #eee !important;
+}
+.panel .tabs .tab:hover:not(.active) .tab-content {
+    background-color: var(--tab-hover-background-color) !important;
+}
+.panel .tabs .tab.active :is(.start-slope .svg-oc-tab-slope-left-icon-sprite-dims, .end-slope .svg-oc-tab-slope-right-icon-sprite-dims) {
+    fill: var(--darkreader-bg--tab-active-background-color) !important;
+    stroke: var(--darkreader-bg--tab-active-background-color) !important;
+}
+body[data-theme="oc-purple"] .panel .tabs .tab.active .tab-content .icon > .svg-tab-Toolbar-icon {
+    filter: brightness(1.5) !important;
+}
+body[data-theme="oc-purple"] .helpbutton :is(.oc-help-icon, .oc-help-icon-extended) {
+    border-color: rgb(217, 203, 239) !important;
+}
+svg {
+    fill: white;
+}
+.svg-open-folder-icon,
+.svg-close-folder-icon {
+    stroke: var(--theme-color) !important;
+}
+.svg-expand-plus-icon,
+.svg-collapse-minus-icon {
+    border-color: white !important;
+    fill: black !important;
+}
+.preferencesoverlay .content-pane-container .oc-bc-pane .radio-wrapper {
+    border-color: transparent !important;
+}
+.preferencesoverlay .content-pane.oc-appearance-pane .theme-preview-container.oc-purple .preview-tab.active div.icon > .svg-tab-Toolbar-icon {
+    fill: #3C1053 !important;
+}
+.preferencesoverlay .content-pane.oc-appearance-pane .theme-preview-container .preview-tabs .preview-tab.active :is(.start-slope, .end-slope) {
+    background-color: rgb(24, 26, 27) !important;
+    background-image: none !important;
+    mask: url(/oc/images/main-sprite.png) no-repeat alpha !important;
+}
+.preferencesoverlay .content-pane.oc-appearance-pane .theme-preview-container .preview-tabs .preview-tab.active .start-slope {
+    mask-position: -280px -402px !important;
+}
+.preferencesoverlay .content-pane.oc-appearance-pane .theme-preview-container .preview-tabs .preview-tab.active .end-slope {
+    mask-position: -300px -402px !important;
+}
+.processingoverlay .content {
+    background-image: none !important;
+    position: relative;
+}
+.processingoverlay .content::before {
+    background-image: url(/oc/images/loading-wheel.gif);
+    background-position: 17px 22px;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    content: "";
+    height: 100%;
+    left: 0;
+    margin-bottom: -5px;
+    padding-left: 35px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.gadget.csApplication .container .indicator.spinner,
+.processingoverlay .content::before {
+    filter: invert(1) brightness(2);
+    mix-blend-mode: lighten;
+}
+
+IGNORE INLINE STYLE
+span[hkey]
+
+IGNORE IMAGE ANALYSIS
+.simpleGrid-container .columnpickermenu .icon
+.clear-all .icon
+.header .help:hover
+.pattern-icon::after
+.multi-date-button-edit .icon
+.processingoverlay .content
+.processingoverlay .content::before
+.gadget.csApplication .container .indicator.spinner
+.import-manager-status-dialog :is(.importFail, .importSuccess) .accordion-button.expanded::before

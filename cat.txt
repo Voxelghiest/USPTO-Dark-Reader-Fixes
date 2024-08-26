@@ -1,0 +1,31 @@
+cpc.uspto.gov
+
+INVERT
+:is(.dijitUpArrowButton, .dijitDownArrowButton) .dijitArrowButtonInner
+.icon-print
+.dijitTitlePane .dijitArrowNode
+.gridx .dijitCheckBox, .gridx .dijitCheckBoxIcon
+
+CSS
+.dojoxExpandoIcon {
+    background-color: gainsboro !important;
+    filter: invert(1) !important;
+}
+.lookupContainerLeft .dijitTabChecked .dijitTabButtonIcon {
+    border-left-color: white !important;
+}
+.dijitInline.btn {
+    border-style: solid !important;
+    border-width: 1px !important;
+}
+.theme1 .ptoGadgetTitlePane .dijitTabListWrapper :is(.dijitTabInnerDivLeft, .dijitTabInnerDivRight) {
+    background-color: rgb(35, 38, 40) !important;
+    background-image: none !important;
+    mask: url(https://cpc.uspto.gov/mcc/secure/lib/mcc/images/main-sprite.png) no-repeat alpha !important;
+}
+.theme1 .ptoGadgetTitlePane .dijitTabListWrapper .dijitTabChecked .dijitTabInnerDivRight {
+    mask-position: -80px -180px !important;
+}
+.theme1 .ptoGadgetTitlePane .dijitTabListWrapper .dijitTabChecked .dijitTabInnerDivLeft {
+    mask-position: -60px -180px !important;
+}
