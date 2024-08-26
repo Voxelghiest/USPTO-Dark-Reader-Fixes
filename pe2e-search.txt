@@ -91,6 +91,23 @@ button:hover {
 .find-within-mark {
     background-color: #dfc74a !important;
 }
+.button-menu .documentViewer .widgetToolbar .button-like[class*="icon-"] .columnSettings::after,
+.button-menu .documentViewer .widgetToolbar .button[class*="icon-"] .columnSettings::after,
+.documentViewer .widgetToolbar .button-like[class*="icon-"] .button-menu .columnSettings::after,
+.documentViewer .widgetToolbar .button-like[class*="icon-"] .icon,
+.documentViewer .widgetToolbar .button[class*="icon-"] .button-menu .columnSettings::after,
+.documentViewer .widgetToolbar .button[class*="icon-"] .icon,
+.gadget.documentViewer .notesPanel .titleBar .notesNavigation .widgetToolbar .button-like[class*="icon-"] button > span,
+.gadget.documentViewer .notesPanel .titleBar .notesNavigation .widgetToolbar .button[class*="icon-"] button > span,
+.gadget.documentViewer .widgetToolbar .button-like[class*="icon-"] .notesPanel .titleBar .notesNavigation button > span,
+.gadget.documentViewer .widgetToolbar .button[class*="icon-"] .notesPanel .titleBar .notesNavigation button > span,
+.button-menu .ered .columnSettings:after,
+.ered .button-menu .columnSettings:after,
+.ered .gadget.documentViewer .notesPanel .titleBar .notesNavigation button>span,
+.ered .icon,
+.gadget.documentViewer .notesPanel .titleBar .notesNavigation .ered button>span {
+    background-image: url("/ui/images/toolbars_new_sprite.png?rev=1d488623") !important;
+}
 
 IGNORE INLINE STYLE
 .documentViewer, .documentViewer .realdocument, .documentViewer .realdocument *
