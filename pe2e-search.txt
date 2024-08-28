@@ -1,7 +1,7 @@
 pe2e-search.aws.uspto.gov
 
 CSS
-:is(.content, .modal-dialog) .icon:not(.button, button[data-id="ered"] *, .ered *, .documentViewer *, .refreshAll),
+:is(.content, .modal-dialog) .icon:not(.button, button[data-id="ered"] *, .ered *, .documentViewer .widgetToolbar *, .refreshAll),
 :is(.custom-dropdown, .notes-viewer-actions, .button-menu .columnSettings)::after,
 .tabs .tab.active .icon,
 .slick-group-toggle,
@@ -57,19 +57,24 @@ header nav.toolbar .icons > div.currentcase::before {
 button:hover {
     box-shadow: inset 0 0 2px #a0a0a0;
 }
+:is(.button.active, .button:active, button.active, button:active, .gadget .controls .knobs .knob.active):not(header *) {
+    box-shadow: inset 0px 1px 7px rgba(255, 255, 255, 0.4);
+}
 :is(.searchHistory, .collections) .content .grid :is(.slick-viewport, .slick-row:not(.slick-group) .slick-cell),
-.hitTerms .contentGrid .hit-terms-table .slick-cell {
+.hitTerms .contentGrid .hit-terms-table .slick-cell,
+.imageViewer.closed .image-viewer + .notesPanel,
+.gadget.documentViewer .notesPanel .notes-panel-content .card {
     background-color: var(--darkreader-neutral-background) !important;
     color: var(--darkreader-neutral-text) !important;
 }
-.searchResults .grid .slick-row,
+:is(.searchResults, .notesViewer) .grid .slick-row,
 .taggedDocument .content .grid .slick-row:not(.slick-group) {
     background-color: transparent !important;
 }
-.searchResults .grid .slick-row .slick-cell:not(.activated, .selected) {
+:is(.searchResults, .notesViewer) .grid .slick-row .slick-cell:not(.activated, .selected) {
     background-color: inherit !important;
 }
-.grid .slick-row .slick-cell.selected {
+:is(.searchResults, .taggedDocument, .notesViewer) .grid .slick-row .slick-cell.selected {
     background-color: #bfd6eb !important;
 }
 .gadget.searchResults .grid.singleline .slick-cell.activated {
@@ -77,18 +82,20 @@ button:hover {
     color: black !important;
 }
 .taggedDocument .content .grid .slick-row:not(.slick-group) .slick-cell .btn-link,
-.searchResults .grid .btn-link {
-    color: rgb(0, 76, 151) !important;
-}
+.searchResults .grid .btn-link,
+.notesViewer .contentGrid .grid .slick-row .slick-cell .btn-link,
 .gadget.documentViewer[data-gadgetid="1"] .realdocument a:not(.highlight a),
 .realdocument .btn-link {
     color: rgb(0, 76, 151) !important;
 }
-.findWithin .navigator {
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(${whiteSmoke}), to(${#dbdbdb})) !important;
+:is(.findWithin, .findWithinGeneric) .navigator {
+    background-image: linear-gradient(to bottom, ${whiteSmoke}, ${#dbdbdb}) !important;
 }
-.find-within-mark {
-    background-color: #dfc74a !important;
+.realdocument .find-within-mark {
+    background-color: #dfc74a;
+}
+.realdocument .find-within-mark.focus {
+    background-color: #fb7441;
 }
 .button-menu .ered .columnSettings:after,
 .ered .button-menu .columnSettings:after,
@@ -101,6 +108,54 @@ button:hover {
 .documentViewer .documentText .document_heading {
     color: #222;
 }
+.image-canvas-wrapper {
+    background-color: #fff !important;
+}
+.image-canvas-wrapper.inverted {
+    background-color: #000 !important;
+    filter: none !important;
+}
+.image-canvas-wrapper.inverted .image-holder {
+    filter: invert(1);
+}
+#colorItems > li.label1 button,
+.highlight_list button.color_ff6666 {
+    background-color: #f66 !important;
+}
+#colorItems > li.label2 button,
+.highlight_list button.color_ffcc66 {
+    background-color: #fc6 !important;
+}
+#colorItems > li.label3 button,
+.highlight_list button.color_ffff33 {
+    background-color: #ff3 !important;
+}
+#colorItems > li.label4 button,
+.highlight_list button.color_33ff33 {
+    background-color: #3f3 !important;
+}
+#colorItems > li.label5 button,
+.highlight_list button.color_66ccff {
+    background-color: #6cf !important;
+}
+#colorItems > li.label6 button,
+.highlight_list button.color_00ffff {
+    background-color: #0ff !important;
+}
+#colorItems > li.label7 button,
+.highlight_list button.color_ccccff {
+    background-color: #ccf !important;
+}
+#colorItems > li.label8 button,
+.highlight_list button.color_cc66ff {
+    background-color: #c6f !important;
+}
+.ui-datepicker {
+    background-image: none !important;
+}
+.btn-color-picker::after {
+    border-top-color: #fff !important;
+}
 
 IGNORE INLINE STYLE
 .documentViewer, .documentViewer .realdocument, .documentViewer .realdocument *
@@ -110,6 +165,8 @@ IGNORE INLINE STYLE
 .gadget.help, .gadget.help *
 :is(.highlightsBanner .handlebuttons, .gadget.searchResults .controls .highlightInfo .activeHighlight) .highlighter
 .contextual-menu-widget-sub-menu .color-picker .item
+.gadget.documentViewer .notesPanel .notes-panel-content .card
+.gadget.notesViewer .grid .btn-color-picker
 
 IGNORE IMAGE ANALYSIS
 .button-menu .ered .columnSettings::after
