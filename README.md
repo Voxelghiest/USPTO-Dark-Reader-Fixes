@@ -1,9 +1,9 @@
 # USPTO-Dark-Reader-Fixes
-The USPTO has approved the installation of the Dark Reader browser extension, which modifies the CSS of webpages to force them into a "dark" color scheme. Dark Reader, however, is imperfect, and so various websites have "fixes" that fine-tune how Dark Reader functions on that specific site.
+The USPTO has approved the installation of the Dark Reader browser extension for Chrome and Edge, which modifies the CSS of webpages to force them into a "dark" color scheme. Dark Reader, however, is imperfect, and so various websites have "fixes" that fine-tune how Dark Reader functions on that specific site.
 
-To get these fixes added to the Dark Reader GitHub would require that they be publicly accessible websites. So this repository contains a number of fixes for internal webtools only available to USPTO personnel.
+Normally, these fixes are submitted by community members and then merged into the codebase by the Dark Reader maintainers so that all users have access to them. However, understandably, the Dark Reader team doesn't accept fixes for websites that aren't publicly accessible, and so this repository contains a number of fixes for internal webtools only available to USPTO personnel.
 
-Unfortunately, it also means that the fixes have to be installed and maintained manually by each user on a per-site basis. But at least the newest versions will be instantly available to all who are interested in using it.
+Unfortunately, it also means that the fixes have to be installed and maintained manually by each user on a per-site basis. But at least the newest versions of the fixes will be instantly available to all who are interested in using them.
 
 In the future, I may add a tool to automatically update the fixes, if it is even possible.
 
@@ -15,3 +15,8 @@ In the future, I may add a tool to automatically update the fixes, if it is even
 5. Click "Apply" at the bottom of the screen, and then reload the webpage if you have it open already. The fixes should now be applied! UwU
 
 To update an existing fix, follow the same procedure, except in step 3 the search should come up with the fix you already have installed. Once you click on the correct url, overwrite the entire contents of the fix in the devtools window with the content of the updated text file.
+
+## Known Issues
+
+### PE2E-Search
+- PE2E-Search is one of the few tools that allows for color customization. In the user preferences, the background, text, and hyperlink colors for a number of gadgets can be modified. Unfortunately, Dark Reader inverts these custom colors and ruins them. Due to limitations of the Dark Reader fixes, this can only be repaired in the Search Results, Document Viewer, Notes Viewer, and Tagged Documents gadgets. For the Search History, Collections, and Hit Terms gadgets, I have instead chosen to overwrite the incorrectly inverted colors with a default dark gray background and white text. Unless PE2E-Search changes how these colors work in the future, it is unlikely that this will ever be resolved.
