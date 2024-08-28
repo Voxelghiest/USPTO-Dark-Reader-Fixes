@@ -1,13 +1,14 @@
 pe2e-search.aws.uspto.gov
 
 CSS
-:is(.content, .modal-dialog) .icon:not(.button, button[data-id="ered"] *, .ered *, .documentViewer .realdocument *, .refreshAll),
+:is(.content, .modal-dialog) .icon:not(.button, button[data-id="ered"] *, .ered *, .documentViewer *, .refreshAll),
 :is(.custom-dropdown, .notes-viewer-actions, .button-menu .columnSettings)::after,
 .tabs .tab.active .icon,
 .slick-group-toggle,
 .icon-gear,
-.content .refreshAll::before {
-    filter: invert(100%) hue-rotate(180deg) brightness(125%) !important;
+.content .refreshAll::before,
+.gadget.notesViewer .filters-content .icon-calendar {
+    filter: invert(1) hue-rotate(180deg) brightness(1.25) !important;
 }
 header nav.toolbar button.barbutton:hover {
     background-color: rgba(255, 255, 255, .1);
@@ -56,18 +57,22 @@ header nav.toolbar .icons > div.currentcase::before {
 button:hover {
     box-shadow: inset 0 0 2px #a0a0a0;
 }
-.searchHistory .content .grid :is(.slick-cell, .slick-viewport),
-.hitTerms .contentGrid .hit-terms-table .slick-cell,
-.taggedDocument .content .grid .slick-row:not(.slick-group) {
+:is(.searchHistory, .collections) .content .grid :is(.slick-viewport, .slick-row:not(.slick-group) .slick-cell),
+.hitTerms .contentGrid .hit-terms-table .slick-cell {
     background-color: var(--darkreader-neutral-background) !important;
+    color: var(--darkreader-neutral-text) !important;
 }
-.searchResults .grid .slick-row {
-    background-color: transparent;
+.searchResults .grid .slick-row,
+.taggedDocument .content .grid .slick-row:not(.slick-group) {
+    background-color: transparent !important;
 }
-.searchResults .grid .slick-row .slick-cell:not(.activated) {
+.searchResults .grid .slick-row .slick-cell:not(.activated, .selected) {
     background-color: inherit !important;
 }
-.gadget.searchResults .grid.singleline .activated.slick-cell {
+.grid .slick-row .slick-cell.selected {
+    background-color: #bfd6eb !important;
+}
+.gadget.searchResults .grid.singleline .slick-cell.activated {
     background-color: #ffb !important;
     color: black !important;
 }
@@ -79,34 +84,22 @@ button:hover {
 .realdocument .btn-link {
     color: rgb(0, 76, 151) !important;
 }
-.documentViewer .widgetToolbar button.icon-folder .icon {
-    background-image: url(https://pe2e-search.aws.uspto.gov/ui/images/toolbars_new_sprite.png?rev=1d488623) !important;
-    background-position: -121px -14px !important;
-    height: 17px;
-    width: 20px;
-}
 .findWithin .navigator {
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(${whiteSmoke}), to(${#dbdbdb})) !important;
 }
 .find-within-mark {
     background-color: #dfc74a !important;
 }
-.button-menu .documentViewer .widgetToolbar .button-like[class*="icon-"] .columnSettings::after,
-.button-menu .documentViewer .widgetToolbar .button[class*="icon-"] .columnSettings::after,
-.documentViewer .widgetToolbar .button-like[class*="icon-"] .button-menu .columnSettings::after,
-.documentViewer .widgetToolbar .button-like[class*="icon-"] .icon,
-.documentViewer .widgetToolbar .button[class*="icon-"] .button-menu .columnSettings::after,
-.documentViewer .widgetToolbar .button[class*="icon-"] .icon,
-.gadget.documentViewer .notesPanel .titleBar .notesNavigation .widgetToolbar .button-like[class*="icon-"] button > span,
-.gadget.documentViewer .notesPanel .titleBar .notesNavigation .widgetToolbar .button[class*="icon-"] button > span,
-.gadget.documentViewer .widgetToolbar .button-like[class*="icon-"] .notesPanel .titleBar .notesNavigation button > span,
-.gadget.documentViewer .widgetToolbar .button[class*="icon-"] .notesPanel .titleBar .notesNavigation button > span,
 .button-menu .ered .columnSettings:after,
 .ered .button-menu .columnSettings:after,
-.ered .gadget.documentViewer .notesPanel .titleBar .notesNavigation button>span,
+.ered .gadget.documentViewer .notesPanel .titleBar .notesNavigation button > span,
 .ered .icon,
-.gadget.documentViewer .notesPanel .titleBar .notesNavigation .ered button>span {
-    background-image: url("/ui/images/toolbars_new_sprite.png?rev=1d488623") !important;
+.gadget.documentViewer .notesPanel .titleBar .notesNavigation .ered button > span,
+.documentViewer .widgetToolbar .button[data-id="ered"] .icon {
+    background-image: url(/ui/images/toolbars_new_sprite.png) !important;
+}
+.documentViewer .documentText .document_heading {
+    color: #222;
 }
 
 IGNORE INLINE STYLE
@@ -115,19 +108,11 @@ IGNORE INLINE STYLE
 .notesViewer
 .taggedDocument :is(.content, .slick-viewport)
 .gadget.help, .gadget.help *
+:is(.highlightsBanner .handlebuttons, .gadget.searchResults .controls .highlightInfo .activeHighlight) .highlighter
+.contextual-menu-widget-sub-menu .color-picker .item
 
 IGNORE IMAGE ANALYSIS
 .button-menu .ered .columnSettings::after
 .ered .button-menu .columnSettings::after
 .ered .gadget.documentViewer .notesPanel .titleBar .notesNavigation button > span
 .ered .icon
-.button-menu .documentViewer .widgetToolbar .button-like[class*="icon-"] .columnSettings::after
-.button-menu .documentViewer .widgetToolbar .button[class*="icon-"] .columnSettings::after
-.documentViewer .widgetToolbar .button-like[class*="icon-"] .button-menu .columnSettings::after
-.documentViewer .widgetToolbar .button-like[class*="icon-"] .icon
-.documentViewer .widgetToolbar .button[class*="icon-"] .button-menu .columnSettings::after
-.documentViewer .widgetToolbar .button[class*="icon-"] .icon
-.gadget.documentViewer .notesPanel .titleBar .notesNavigation .widgetToolbar .button-like[class*="icon-"] button > span
-.gadget.documentViewer .notesPanel .titleBar .notesNavigation .widgetToolbar .button[class*="icon-"] button > span
-.gadget.documentViewer .widgetToolbar .button-like[class*="icon-"] .notesPanel .titleBar .notesNavigation button > span
-.gadget.documentViewer .widgetToolbar .button[class*="icon-"] .notesPanel .titleBar .notesNavigation button > span
