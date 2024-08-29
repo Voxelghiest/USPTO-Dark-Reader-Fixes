@@ -43,11 +43,12 @@ CSS
 .ocbutton {
     background-color: #6c4b7e !important;
 }
-:is(.content, .etiCollapsiblePane) button:not(.highlight, .highlight-color, .highlight-visibility, .columnpicker, .extract, .ocr-confidence.active, .refresh-paused .eti-widget-refreshTimer-button) .icon,
+:is(.content, .etiCollapsiblePane) button:not(.highlight, .highlight-color, .highlight-visibility, .columnpicker, .extract, .ocr-confidence.active, .refresh-paused .eti-widget-refreshTimer-button) :is(.icon, .toggler),
 .documentListMenu_Button::after,
 .annotation_toolbar_listMenu :is(.annotation_arrow, .annotation_line, .annotation_oval, .annotation_rect)::before,
 .grid :is(.icon-star-filled, .icon-star-hollow),
 .iconStar,
+.rendition,
 .panel .tabs .tab.active .close,
 .overlay .titlebar .close {
     filter: invert(1) hue-rotate(180deg) brightness(1.25);
@@ -56,11 +57,11 @@ CSS
 .overlay .titlebar .close:hover {
     filter: none;
 }
-:is(button, .button):not(:disabled, .disabled, .header *, .etiCollapsiblePane .collapsible-pane-arrow, .eti-widget-documentMetadata .eti-widget-documentMetadata-toggle, .eti-widget-claimsTreeViewerToolbar .eti-widget-claimsTreeViewerToolbar-toggle):hover {
+:is(button, .button):not(:disabled, .disabled, .applicationviewer *):not(_):hover {
     box-shadow: inset 0 0 2px #ddd;
 }
-:is(.button.active, .button:active, button.active, button:active):not(.header *, .etiCollapsiblePane .collapsible-pane-arrow, .eti-widget-documentMetadata .eti-widget-documentMetadata-toggle, .eti-widget-claimsTreeViewerToolbar .eti-widget-claimsTreeViewerToolbar-toggle) {
-    box-shadow: inset 0 0 4px #aaa !important;
+:is(.button.active, .button:active, button.active, button:active):not(_) {
+    box-shadow: inset 0 0 4px #aaa;
 }
 .ocr-confidence.active .icon {
     filter: brightness(1.5);
@@ -147,11 +148,22 @@ CSS
 .continuity-reports:not(.expanded) .button-group {
     display: none !important;
 }
+.etiPageHighlight:has(> .etiPageHighlight) {
+    background-color: transparent !important;
+}
+.notesViewer .highlight:has(> .eti-widget-Colorpicker) {
+    background-color: initial;
+}
+.eti-widget-Colorpicker-color {
+    border: 1px solid transparent;
+}
+.eti-widget-Colorpicker-color:hover:not(_) {
+    margin: 1px;
+}
 
 IGNORE INLINE STYLE
-.highlight-color .icon
+.highlight-color, .highlight-color .icon, .etiPageHighlight
 .eti-widget-Colorpicker-color
-span[hkey]
 .eti-widget-claimsTreeViewer .claimTreeIndented .toggle line.vertical
 .continuity-viewer :is(.canvas .panCanvas, .ptoContinuityMapLegend .ptoLegendShape) .node :is(rect, polygon, path, ellipse):not(.note *)
 .continuity-viewer .canvas .panCanvas .link :is(path, rect)
