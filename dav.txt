@@ -6,10 +6,12 @@ INVERT
 .preferencesoverlay .pattern-icon::after
 .sort-icon
 .claimBlockIcon, .claimIndentIcon, .claimParagraphIcon
+.continuity-viewer .canvas .note-icon
 
 CSS
 :root {
-    --main-bg-color: rgb(31, 34, 35);
+    --main-bg-color: rgb(24, 26, 27);
+    --main-bg-color-dark: rgb(31, 34, 35);
 }
 .header .toolbar .icons > div.bar-section-divider:not(.spacer) {
     border-right-color: #ffffff !important;
@@ -45,8 +47,14 @@ CSS
 .documentListMenu_Button::after,
 .annotation_toolbar_listMenu :is(.annotation_arrow, .annotation_line, .annotation_oval, .annotation_rect)::before,
 .grid :is(.icon-star-filled, .icon-star-hollow),
-.iconStar {
-    filter: invert(1) hue-rotate(180deg) brightness(1.25) !important;
+.iconStar,
+.panel .tabs .tab.active .close,
+.overlay .titlebar .close {
+    filter: invert(1) hue-rotate(180deg) brightness(1.25);
+}
+.panel .tabs .tab.active .close:hover,
+.overlay .titlebar .close:hover {
+    filter: none;
 }
 :is(button, .button):not(:disabled, .disabled, .header *, .etiCollapsiblePane .collapsible-pane-arrow, .eti-widget-documentMetadata .eti-widget-documentMetadata-toggle, .eti-widget-claimsTreeViewerToolbar .eti-widget-claimsTreeViewerToolbar-toggle):hover {
     box-shadow: inset 0 0 2px #ddd;
@@ -65,7 +73,7 @@ CSS
     border-color: #a1a1a1 !important;
 }
 .notes-viewer.etiCollapsiblePane {
-    background-color: var(--main-bg-color) !important;
+    background-color: var(--main-bg-color-dark) !important;
 }
 .claims-tree-viewer:not(.expanded) .eti-widget-claimsTreeViewer {
     display: none !important;
@@ -90,12 +98,6 @@ CSS
 .panel .tabs .tab.active :is(.start-slope, .end-slope) {
     filter: invert(1) invert(4%) sepia(2%) saturate(3449%) hue-rotate(155deg) brightness(93%) contrast(87%);
 }
-.panel .tabs .tab.active .close {
-    filter: invert(100%) brightness(125%) !important;
-}
-.panel .tabs .tab.active .close:hover {
-    filter: none !important;
-}
 .panel .tabs .tab:not(.active):hover::after {
     background-color: rgba(235, 235, 235, .3) !important;
 }
@@ -117,12 +119,42 @@ CSS
 .stamping.invert-colors .image-viewer .dav-imageDocumentView .dav-virtualScrollRegion {
     cursor: url('data:image/svg+xml,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" version="1.0"><g><path d="m17.51,10.79l-18,0l-1.75,-2l1.75,-1.99l18,0l-1.75,1.99l1.75,2z" fill="white" stroke="black" stroke-opacity="0" transform="rotate(-45 7.635 8.795)"/><path d="m0,0l6.29,4.23l-3.82,0.41l-2.47,2.94l0,-7.58z" fill="white" stroke="black" stroke-opacity="0"/></g></svg>'), text;
 }
+.continuity-viewer .canvas .wrapper.inner > rect.background {
+    fill: var(--main-bg-color);
+}
+.ptoPatentFamilyMap .timeLineEvenRows {
+    fill: var(--main-bg-color-dark) !important;
+}
+.ptoPatentFamilyMap .timeLineRow {
+    fill: var(--main-bg-color) !important;
+}
+.cdm-reports-container .report-continuity .pfmCaseHeader {
+    background-color: #080808 !important;
+}
+.continuity-viewer .canvas .panCanvas .link text {
+    stroke-width: 0.75 !important;
+}
+.continuity-viewer .canvas .panCanvas .link path[marker-end="url(#dependent)"] {
+    stroke: #666 !important;
+}
+.continuity-reports div.etiCollapsiblePane-title {
+    width: auto;
+}
+.continuity-reports:not(.expanded) .etiCollapsiblePane-title-text {
+    padding-left: 0px;
+    padding-top: 0px;
+}
+.continuity-reports:not(.expanded) .button-group {
+    display: none !important;
+}
 
 IGNORE INLINE STYLE
 .highlight-color .icon
 .eti-widget-Colorpicker-color
 span[hkey]
 .eti-widget-claimsTreeViewer .claimTreeIndented .toggle line.vertical
+.continuity-viewer :is(.canvas .panCanvas, .ptoContinuityMapLegend .ptoLegendShape) .node :is(rect, polygon, path, ellipse):not(.note *)
+.continuity-viewer .canvas .panCanvas .link :is(path, rect)
 
 IGNORE IMAGE ANALYSIS
 .icon, .pin
