@@ -43,7 +43,7 @@ CSS
 .ocbutton {
     background-color: #6c4b7e !important;
 }
-:is(.content, .etiCollapsiblePane) button:not(.highlight, .highlight-color, .highlight-visibility, .columnpicker, .extract, .ocr-confidence.active, .refresh-paused .eti-widget-refreshTimer-button) :is(.icon, .toggler),
+:is(.content, .etiCollapsiblePane) button:not(.highlight, .highlight-color, .highlight-visibility, .columnpicker, .ocr-confidence.active, .extract, .refresh-paused .eti-widget-refreshTimer-button) :is(.icon, .toggler),
 .documentListMenu_Button::after,
 .annotation_toolbar_listMenu :is(.annotation_arrow, .annotation_line, .annotation_oval, .annotation_rect)::before,
 .grid :is(.icon-star-filled, .icon-star-hollow),
@@ -55,6 +55,9 @@ CSS
 }
 .panel .tabs .tab.active .close:hover,
 .overlay .titlebar .close:hover {
+    filter: none;
+}
+.extract .icon.icon:not(_) {
     filter: none;
 }
 :is(button, .button):not(:disabled, .disabled, .applicationviewer *):not(_):hover {
@@ -162,7 +165,10 @@ CSS
 }
 
 IGNORE INLINE STYLE
-.highlight-color, .highlight-color .icon, .etiPageHighlight
+.highlight-color
+.highlight-color .icon
+.etiPageHighlight
+span[hkey]
 .eti-widget-Colorpicker-color
 .eti-widget-claimsTreeViewer .claimTreeIndented .toggle line.vertical
 .continuity-viewer :is(.canvas .panCanvas, .ptoContinuityMapLegend .ptoLegendShape) .node :is(rect, polygon, path, ellipse):not(.note *)
