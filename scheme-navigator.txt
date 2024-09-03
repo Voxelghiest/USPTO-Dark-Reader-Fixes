@@ -11,6 +11,9 @@ CSS
 .cpcip-scheme-viewer-micro .icon:not(.icon-inverse, .dropdown-toggle)::after {
     filter: invert(1) hue-rotate(180deg) brightness(1.25) !important;
 }
+.cpcip-scheme-viewer-micro .icon::after {
+    background-image: url(/scheme-viewer/black.svg) !important;
+}
 .btn-toggle-group .btn-info,
 .btn-info-light {
     background-color: #4b819d !important;
