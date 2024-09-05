@@ -1,0 +1,15 @@
+ccd.fiveipoffices.org
+
+CSS
+div#header,
+.window_panel .window_header_normal,
+div.dialog-border-top,
+div#top-level-nav,
+div.big-toolbar,
+.panel-header {
+    background-blend-mode: multiply;
+}
+div#top-level-nav:not(_),
+.panel-header:not(_) {
+    background-color: var(--darkreader-neutral-background);
+}
