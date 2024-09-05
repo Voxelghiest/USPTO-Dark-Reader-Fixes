@@ -2,6 +2,7 @@ dav.uspto.gov/oc
 
 INVERT
 .arrow-down-icon, .arrow-dropdown .icon, .eti-selectmenu-arrow, .left-arrow, .documentListMenu_Button::after
+.dropdownmenu .items .item .arrow
 .preferencesoverlay .pattern-icon::after
 .sort-icon
 .import-manager-status-dialog :is(.importFail, .importSuccess) .accordion-button::before
@@ -10,13 +11,18 @@ CSS
 .header .toolbar .icons > div.bar-section-divider:not(.spacer) {
     border-right-color: #ffffff !important;
 }
-.header .toolbar {
-    background-color: #303030 !important;
-    box-shadow: inset 0 1px 0 #5A5A5A, 0 1px 2px #888 !important;
+.header .toolbar:not(_) {
+    background-color: #303030;
+    box-shadow: inset 0 1px 0 #5A5A5A, 0 1px 2px #888;
 }
 :is(.content, .etiCollapsiblePane) button:not(.columnpicker) .icon,
-.grid :is(.icon-star-filled, .icon-star-hollow) {
+.grid :is(.icon-star-filled, .icon-star-hollow),
+.paragraphs .accordion .section .header .title > span,
+.simple-tree .toggle {
     filter: invert(1) hue-rotate(180deg) brightness(1.25) !important;
+}
+.overlay.form-selection-overlay .document-section .tree .simple-tree-branch .simple-tree-node.selected > .node-title .form-item-unavailable:not(_) {
+    filter: none;
 }
 .eti-widget-combobox .eti-widget-combobox-button.eti-widget-dropDownButton {
     border-color: #666 !important;
@@ -24,14 +30,17 @@ CSS
 .tabcontrols .controls {
     border-left-color: rgba(255, 255, 255, 0.3);
 }
-.panel .tabs .tab:not(.active) .tab-content {
-    background-color: var(--tab-background-color) !important;
+.panel .tabs .tab .tab-content:not(_) {
+    background-color: var(--tab-background-color);
 }
-.panel .tabs .tab .tab-content {
-    border-top-color: #eee !important;
+.panel .tabs .tab .tab-content:not(_) {
+    border-top-color: #eee;
 }
-.panel .tabs .tab:hover:not(.active) .tab-content {
-    background-color: var(--tab-hover-background-color) !important;
+.panel .tabs .tab:hover:not(.active) .tab-content:not(_) {
+    background-color: var(--tab-hover-background-color);
+}
+.panel .tabs .tab.active .tab-content:not(_) {
+    border-top-color: #eee;
 }
 .panel .tabs .tab.active :is(.start-slope .svg-oc-tab-slope-left-icon-sprite-dims, .end-slope .svg-oc-tab-slope-right-icon-sprite-dims) {
     fill: var(--darkreader-bg--tab-active-background-color) !important;
@@ -46,14 +55,14 @@ body[data-theme="oc-purple"] .helpbutton :is(.oc-help-icon, .oc-help-icon-extend
 svg {
     fill: white;
 }
-.svg-open-folder-icon,
-.svg-close-folder-icon {
-    stroke: var(--theme-color) !important;
+.svg-open-folder-icon:not(_),
+.svg-close-folder-icon:not(_) {
+    stroke: var(--theme-color);
 }
-.svg-expand-plus-icon,
-.svg-collapse-minus-icon {
-    border-color: white !important;
-    fill: black !important;
+.svg-expand-plus-icon:not(_),
+.svg-collapse-minus-icon:not(_) {
+    border-color: white;
+    fill: black;
 }
 .preferencesoverlay .content-pane-container .oc-bc-pane .radio-wrapper {
     border-color: transparent !important;
@@ -95,9 +104,16 @@ svg {
     filter: invert(1) brightness(2);
     mix-blend-mode: lighten;
 }
+.gadget.templateManager :focus:not(.fptab):not(_) {
+    outline-color: ${black};
+}
+.gadget.templateManager .toggle:focus:not(.fptab) {
+    outline-color: black;
+}
 
 IGNORE INLINE STYLE
 span[hkey]
+body
 
 IGNORE IMAGE ANALYSIS
 .simpleGrid-container .columnpickermenu .icon
