@@ -1,4 +1,4 @@
-pe2e-search.aws.uspto.gov
+pe2e-search.aws.uspto.gov/ui
 
 CSS
 :is(.content, .modal-dialog) .icon:not(.button, button[data-id="ered"] *, .ered *, .documentViewer .widgetToolbar *, .refreshAll),
@@ -156,6 +156,15 @@ button:hover {
 .btn-color-picker::after {
     border-top-color: #fff !important;
 }
+.gadget.documentFilters .container .documentFilter-content .queryBuilder em:not(_) {
+    background-color: #eee;
+}
+.gadget.documentFilters .container #docFilterTree ul.jqtree-tree .jqtree-doc-span.jqtree-highlighted:not(_),
+.gadget.documentFilters .container #docFilterTree ul.jqtree-tree .jqtree-doc-span.jqtree-selected.jqtree-highlighted:not(_),
+.gadget.documentFilters .container #classSchemeTree ul.jqtree-tree .jqtree-doc-span.jqtree-highlighted:not(_),
+.gadget.documentFilters .container #classSchemeTree ul.jqtree-tree .jqtree-doc-span.jqtree-selected.jqtree-highlighted:not(_) {
+    background-color: #ffb;
+}
 
 IGNORE INLINE STYLE
 .documentViewer, .documentViewer .realdocument, .documentViewer .realdocument *
@@ -167,6 +176,9 @@ IGNORE INLINE STYLE
 .contextual-menu-widget-sub-menu .color-picker .item
 .gadget.documentViewer .notesPanel .notes-panel-content .card
 .gadget.notesViewer .grid .btn-color-picker
+.gadget.documentFilters .container #docFilterContainer
+.gadget.documentFilters .container .documentFilter-content .schemeAndDocumentViewer .schemeAndDocumentViewer-content
+.gadget.documentFilters .container .documentFilter-content .queryBuilder .queryBuilder-content
 
 IGNORE IMAGE ANALYSIS
 .button-menu .ered .columnSettings::after
