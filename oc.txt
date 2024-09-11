@@ -18,7 +18,8 @@ CSS
 :is(.content, .etiCollapsiblePane) button:not(.columnpicker) .icon,
 .grid :is(.icon-star-filled, .icon-star-hollow),
 .paragraphs .accordion .section .header .title > span,
-.simple-tree .toggle {
+.simple-tree .toggle,
+.gadget.setsGadget ul.jqtree-tree .jqtree-toggler {
     filter: invert(1) hue-rotate(180deg) brightness(1.25) !important;
 }
 .overlay.form-selection-overlay .document-section .tree .simple-tree-branch .simple-tree-node.selected > .node-title .form-item-unavailable:not(_) {
@@ -101,8 +102,7 @@ svg {
 }
 .gadget.csApplication .container .indicator.spinner,
 .processingoverlay .content::before {
-    filter: invert(1) brightness(2);
-    mix-blend-mode: lighten;
+    mix-blend-mode: screen;
 }
 .gadget.templateManager :focus:not(.fptab):not(_) {
     outline-color: ${black};
@@ -110,10 +110,14 @@ svg {
 .gadget.templateManager .toggle:focus:not(.fptab) {
     outline-color: black;
 }
+.ui-widget-content.thumbContainer {
+    background-image: none;
+}
 
 IGNORE INLINE STYLE
 span[hkey]
 body
+.thumb
 
 IGNORE IMAGE ANALYSIS
 .simpleGrid-container .columnpickermenu .icon
@@ -122,6 +126,4 @@ IGNORE IMAGE ANALYSIS
 .pattern-icon::after
 .multi-date-button-edit .icon
 .processingoverlay .content
-.processingoverlay .content::before
-.gadget.csApplication .container .indicator.spinner
 .import-manager-status-dialog :is(.importFail, .importSuccess) .accordion-button.expanded::before
