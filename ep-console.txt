@@ -1,10 +1,6 @@
 dav.uspto.gov/ep
 
 CSS
-.search-controls .pay-period-navigation .button .icon,
-.simpleGrid th[data-sort] .sort-icon {
-    filter: invert(1) hue-rotate(180deg) brightness(1.25);
-}
 svg {
     fill: white;
 }
@@ -14,8 +10,21 @@ svg {
 #svgSpriteSheetWrapper :is(#ep-tab-slope-right-icon-sprite, #ep-tab-slope-left-icon-sprite) path:first-child {
     stroke: transparent;
 }
-:is(.svg-expand-plus-icon, .svg-collapse-minus-icon) {
+:is(.svg-expand-plus-icon, .svg-collapse-minus-icon):not(_) {
+    border-color: ${black};
     fill: black;
+}
+.search-controls .pay-period-navigation .button .icon,
+.simpleGrid th[data-sort] .sort-icon,
+.pagination-wrapper .icon {
+    filter: invert(1) hue-rotate(180deg) brightness(1.25);
+}
+.loading-icon:not(_) {
+    background-color: initial;
+    mix-blend-mode: screen;
+}
+.bar-buttons .externalLinks:not(_) {
+    width: 18px;
 }
 input[type="radio"]:not(_),
 input[type="checkbox"]:not(_) {
@@ -24,25 +33,62 @@ input[type="checkbox"]:not(_) {
 .helpbutton :is(.ep-help-icon, .ep-help-icon-extended):not(_) {
     border-color: white;
 }
+.header .mainbar:not(_) {
+    background: var(--mainbar-backgroundcolor);
+    border-bottom-color: #222;
+}
+.header .toolbar:not(_) {
+    background: #303030;
+    box-shadow: inset 0 1px 0 #5A5A5A, 0 1px 2px #888;
+}
+.header .toolbar .bar-button.dav:not(_) {
+    background-color: #4C76BD;
+}
+.header .toolbar .bar-button.estsearch:not(_) {
+    background-color: #00856A;
+}
+.header .toolbar .bar-button.oc:not(_) {
+    background-color: #6c4b7e;
+}
 .header .toolbar .bar-section-divider:not(_) {
     border-right-color: white;
 }
 body .panel .tabs .tab :is(.start-slope .svg-oc-tab-slope-left-icon-sprite-dims, .end-slope .svg-oc-tab-slope-right-icon-sprite-dims):not(_) {
-    fill: var(--darkreader-bg--tab-background-color);
+    fill: var(--tab-background-color);
     stroke: white;
 }
 .panel .tabs .tab .tab-content:not(_) {
+    background-color: var(--tab-background-color);
     border-top-color: rgba(255, 255, 255, 0.7);
 }
 body .panel .tabs .tab:hover :is(.start-slope .svg-oc-tab-slope-left-icon-sprite-dims, .end-slope .svg-oc-tab-slope-right-icon-sprite-dims):not(_) {
-    fill: var(--darkreader-bg--tab-hover-background-color);
+    fill: var(--tab-hover-background-color);
+    stroke: white;
 }
 .panel .tabs .tab:hover:not(.active) .tab-content:not(_) {
-    border-top-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--tab-hover-background-color);
+    color: var(--tab-hover-text-color);
 }
 body .panel .tabs .tab.active :is(.start-slope .svg-oc-tab-slope-left-icon-sprite-dims, .end-slope .svg-oc-tab-slope-right-icon-sprite-dims):not(_) {
     fill: var(--darkreader-bg--tab-active-background-color);
     stroke: var(--darkreader-bg--tab-active-background-color);
+}
+.panel .tabs .tab.active .tab-content:not(_) {
+    border-top-color: var(--darkreader-bg--tab-active-background-color);
+}
+.tabcontrols .controls:not(_) {
+    border-left-color: rgba(255, 255, 255, 0.3);
+}
+.tabcontrols .controls .icon:focus:not(_) {
+    outline-color: white;
+}
+.gadget.dmReport3106 .result-accordion.pay-period-info .column-group-header[aria-label="1 - Amendments"]:not(_),
+.gadget.dmReport3106 .result-accordion .dot.Amendments:not(_) {
+    background-color: #1D3C63;
+}
+.gadget.dmReport3106 .result-accordion.pay-period-info :is(td, th):is([data-column="fyrValue1"], [data-column="fyrValue2"], [data-column="fyrValue3"]):not(_),
+.gadget.dmReport3106 .result-accordion.pay-period-info .column-group-header:is([aria-label="1 - Amendments"], [aria-label="2 - Special New"], [aria-label="3 - New"]):not(_) {
+    border-right-color: ${black};
 }
 
 IGNORE INLINE STYLE
