@@ -18,6 +18,9 @@ To update an existing fix, follow the same procedure, except in step 3 the searc
 
 ## Known Issues
 
+### General
+- **Fixes Not Applying on Startup:** The first time you open your browser after turning on your computer, the Dark Reader fixes from this repo will sometimes not be applied. If this occurs, open the DevTools panel and click "Apply", then reload the webpage.
+
 ### PE2E-Search
 - **Custom Gadget Colors:** PE2E-Search is one of the few tools that allows for color customization. In the user preferences, the background, text, and hyperlink colors for a number of gadgets can be modified. Unfortunately, Dark Reader inverts these custom colors and ruins them. Due to limitations of the Dark Reader fixes, this can only be repaired in the Search Results, Document Viewer, Notes Viewer, Tagged Documents, and Document Filters gadgets. For the Search History, Collections, and Hit Terms gadgets, I have instead chosen to overwrite the incorrectly inverted colors with a default dark gray background and white text. Unless PE2E-Search changes how these colors work in the future, it is unlikely that this will ever be resolved.
 - **Document Viewer Highlights:** In the Document Viewer, due to limiations of the Dark Reader fixes, it is currently impossible to revert the inverted highlight colors for the hit terms.
