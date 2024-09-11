@@ -46,8 +46,7 @@ CSS
 :is(.content, .etiCollapsiblePane) button:not(.highlight, .highlight-color, .highlight-visibility, .columnpicker, .ocr-confidence.active, .extract, .refresh-paused .eti-widget-refreshTimer-button) :is(.icon, .toggler),
 .documentListMenu_Button::after,
 .annotation_toolbar_listMenu :is(.annotation_arrow, .annotation_line, .annotation_oval, .annotation_rect)::before,
-.grid :is(.icon-star-filled, .icon-star-hollow),
-.iconStar,
+:is(.iconStar, .icon-star-filled, .icon-star-hollow),
 .rendition,
 .panel .tabs .tab.active .close,
 .overlay .titlebar .close {
@@ -73,9 +72,9 @@ button:active:not(_) {
 .ocr-confidence.active .icon {
     filter: brightness(1.5);
 }
-.loading-mask-wheel {
-    filter: invert(1) brightness(2);
-    mix-blend-mode: lighten;
+.loading-mask-wheel:not(_),
+.applicationData_tooltip_spinner:not(_) {
+    mix-blend-mode: screen;
 }
 .refresh-paused .eti-widget-refreshTimer-button {
     border-color: #a1a1a1 !important;
@@ -185,5 +184,4 @@ IGNORE IMAGE ANALYSIS
 .show-annotations .icon
 .header .help:hover
 .pattern-icon::after
-.loading-mask-wheel
 .annotation_toolbar_listMenu :is(.annotation_arrow, .annotation_line, .annotation_oval, .annotation_rect)::before
