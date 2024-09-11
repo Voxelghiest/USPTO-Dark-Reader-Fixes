@@ -1,0 +1,49 @@
+dav.uspto.gov/ep
+
+CSS
+.search-controls .pay-period-navigation .button .icon,
+.simpleGrid th[data-sort] .sort-icon {
+    filter: invert(1) hue-rotate(180deg) brightness(1.25);
+}
+svg {
+    fill: white;
+}
+#svgSpriteSheetWrapper :is(#ep-tab-slope-right-icon-sprite, #ep-tab-slope-left-icon-sprite) path[stroke-width="5"] {
+    stroke: inherit;
+}
+#svgSpriteSheetWrapper :is(#ep-tab-slope-right-icon-sprite, #ep-tab-slope-left-icon-sprite) path:first-child {
+    stroke: transparent;
+}
+:is(.svg-expand-plus-icon, .svg-collapse-minus-icon) {
+    fill: black;
+}
+input[type="radio"]:not(_),
+input[type="checkbox"]:not(_) {
+    border-color: #555;
+}
+.helpbutton :is(.ep-help-icon, .ep-help-icon-extended):not(_) {
+    border-color: white;
+}
+.header .toolbar .bar-section-divider:not(_) {
+    border-right-color: white;
+}
+body .panel .tabs .tab :is(.start-slope .svg-oc-tab-slope-left-icon-sprite-dims, .end-slope .svg-oc-tab-slope-right-icon-sprite-dims):not(_) {
+    fill: var(--darkreader-bg--tab-background-color);
+    stroke: white;
+}
+.panel .tabs .tab .tab-content:not(_) {
+    border-top-color: rgba(255, 255, 255, 0.7);
+}
+body .panel .tabs .tab:hover :is(.start-slope .svg-oc-tab-slope-left-icon-sprite-dims, .end-slope .svg-oc-tab-slope-right-icon-sprite-dims):not(_) {
+    fill: var(--darkreader-bg--tab-hover-background-color);
+}
+.panel .tabs .tab:hover:not(.active) .tab-content:not(_) {
+    border-top-color: rgba(255, 255, 255, 0.3);
+}
+body .panel .tabs .tab.active :is(.start-slope .svg-oc-tab-slope-left-icon-sprite-dims, .end-slope .svg-oc-tab-slope-right-icon-sprite-dims):not(_) {
+    fill: var(--darkreader-bg--tab-active-background-color);
+    stroke: var(--darkreader-bg--tab-active-background-color);
+}
+
+IGNORE INLINE STYLE
+#svgSpriteSheetWrapper :is(#ep-tab-slope-right-icon-sprite, #ep-tab-slope-left-icon-sprite) *
