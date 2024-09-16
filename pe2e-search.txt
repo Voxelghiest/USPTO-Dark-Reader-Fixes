@@ -7,7 +7,8 @@ CSS
 .slick-group-toggle,
 .icon-gear,
 .content .refreshAll::before,
-.gadget.notesViewer .filters-content .icon-calendar {
+.gadget.notesViewer .filters-content .icon-calendar,
+.toolbar-multiselect .multiselect-preferences-col4 .moveicon {
     filter: invert(1) hue-rotate(180deg) brightness(1.25) !important;
 }
 header nav.toolbar button.barbutton:hover {
@@ -164,6 +165,13 @@ button:hover {
 .gadget.documentFilters .container #classSchemeTree ul.jqtree-tree .jqtree-doc-span.jqtree-highlighted:not(_),
 .gadget.documentFilters .container #classSchemeTree ul.jqtree-tree .jqtree-doc-span.jqtree-selected.jqtree-highlighted:not(_) {
     background-color: #ffb;
+}
+.content.userPreferencesOverlayContent .content-column .pane .ui-tabs#customize-toolbar-tabs .ui-tabs-nav li:not(_),
+.content.userPreferencesOverlayContent #customize-toolbar-tabs #document-viewer-tabs {
+    background-image: none;
+}
+.content.userPreferencesOverlayContent #customize-toolbar-tabs .content-column .pane .ui-tabs .ui-tabs-panel .ui-tabs-nav li.ui-tabs-active:not(_) {
+    border-bottom-color: #707070;
 }
 
 IGNORE INLINE STYLE
