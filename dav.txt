@@ -74,7 +74,8 @@ button:active:not(_),
     filter: brightness(1.5);
 }
 .loading-mask-wheel:not(_),
-.applicationData_tooltip_spinner:not(_) {
+.applicationData_tooltip_spinner:not(_),
+.documentListMenu_spinner:not(_) {
     mix-blend-mode: screen;
 }
 .refresh-paused .eti-widget-refreshTimer-button {
