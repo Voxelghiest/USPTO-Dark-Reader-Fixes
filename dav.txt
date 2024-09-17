@@ -59,14 +59,15 @@ CSS
 .extract .icon.icon:not(_) {
     filter: none;
 }
-button:not(:disabled, .disabled, .applicationviewer *):not(_):hover,
-.button:not(:disabled, .disabled, .applicationviewer *):not(_):hover {
+button:not(:disabled, .disabled, .applicationviewer *):hover:not(_),
+.button:not(:disabled, .disabled, .applicationviewer *):hover:not(_) {
     box-shadow: inset 0 0 2px #ddd;
 }
 .button.active:not(_),
 .button:active:not(_),
 button.active:not(_),
-button:active:not(_) {
+button:active:not(_),
+.baseImageViewer .toolbar .button-group .eti-widget-button.active:not(_) {
     box-shadow: inset 0 0 4px #aaa;
 }
 .ocr-confidence.active .icon {
