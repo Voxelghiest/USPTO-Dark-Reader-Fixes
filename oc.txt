@@ -19,7 +19,9 @@ CSS
 .grid :is(.icon-star-filled, .icon-star-hollow),
 .paragraphs .accordion .section .header .title > span,
 .simple-tree .toggle,
-.gadget.setsGadget ul.jqtree-tree .jqtree-toggler {
+.gadget.setsGadget ul.jqtree-tree .jqtree-toggler,
+#control.toolbar .glyphicons[style*="background-image"],
+#notesPanelWrapper #notesPanel .user-image-col {
     filter: invert(1) hue-rotate(180deg) brightness(1.25) !important;
 }
 .overlay.form-selection-overlay .document-section .tree .simple-tree-branch .simple-tree-node.selected > .node-title .form-item-unavailable:not(_) {
@@ -125,11 +127,26 @@ svg {
 .zone .emptyzone .closewindowpanel:not(_) {
     background-color: var(--darkreader-neutral-background);
 }
+.customAnnotationBar > .glyphicons:hover:not(_) {
+    background-color: transparent;
+}
+#tabs,
+#tabs :is(#bookmarkView, #thumbnailView),
+.annotEditDialog.ui-widget-content {
+    background-image: none;
+}
+.pageContainer canvas.hacc {
+    filter: invert(1) hue-rotate(180deg);
+}
+.colorPicker li div:not(_) {
+    border-color: dimgray;
+}
 
 IGNORE INLINE STYLE
 span[hkey]
 body
 .thumb
+.colorPicker li div
 
 IGNORE IMAGE ANALYSIS
 .simpleGrid-container .columnpickermenu .icon
