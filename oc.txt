@@ -65,6 +65,10 @@ svg {
     border-color: white;
     fill: black;
 }
+.gadget.setsGadget .container .main-grid tr:is(.highlighted, .new):not(_),
+.gadget.setsGadget .container .main-grid tr:is(.highlighted, .new) + tr.child-row:not(_) {
+    background-color: rgba(61, 58, 0, 0.5);
+}
 .preferencesoverlay .content-pane-container .oc-bc-pane .radio-wrapper {
     border-color: transparent !important;
 }
@@ -92,16 +96,21 @@ svg {
     background-repeat: no-repeat;
     background-size: 12px 12px;
     content: "";
+    filter: invert(1);
     height: 100%;
     left: 0;
     margin-bottom: -5px;
+    mix-blend-mode: screen;
     padding-left: 35px;
     position: absolute;
     top: 0;
     width: 100%;
 }
-.gadget.csApplication .container .indicator.spinner,
-.processingoverlay .content::before {
+.gadget.csApplication .container .indicator.spinner {
+    mix-blend-mode: screen;
+}
+.loading-icon:not(_) {
+    background-color: transparent;
     mix-blend-mode: screen;
 }
 .gadget.templateManager :focus:not(.fptab):not(_) {
@@ -112,6 +121,9 @@ svg {
 }
 .ui-widget-content.thumbContainer {
     background-image: none;
+}
+.zone .emptyzone .closewindowpanel:not(_) {
+    background-color: var(--darkreader-neutral-background);
 }
 
 IGNORE INLINE STYLE
