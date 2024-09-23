@@ -70,6 +70,9 @@ button:active:not(_),
 .baseImageViewer .toolbar .button-group .eti-widget-button.active:not(_) {
     box-shadow: inset 0 0 4px #aaa;
 }
+.examiner-notes button.close:not(_) {
+    box-shadow: none;
+}
 .ocr-confidence.active .icon {
     filter: brightness(1.5);
 }
